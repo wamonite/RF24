@@ -43,7 +43,7 @@
   #endif
   
   #define digitalWrite(pin, value) gpio.write(pin, value)
-  #define digitalRead(pin) GPIO::read(pin)
+  #define digitalRead(pin) gpio.read(pin)
   #define pinMode(pin, direction) gpio.open(pin, direction)
 
   #ifndef __TIME_H__

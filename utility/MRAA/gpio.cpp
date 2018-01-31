@@ -26,14 +26,14 @@ void GPIO::begin(uint8_t ce_pin, uint8_t cs_pin)
 	
 	// Prophet: owner can be set here, because we use our pins exclusively, and are making mraa:Gpio context persistent
 	// so pins will be unexported only if close is called, or on destruction
-	gpio_0 = new mraa::Gpio(ce_pin/*,0*/);
+//	gpio_0 = new mraa::Gpio(ce_pin/*,0*/);
 	//gpio_1 = new mraa::Gpio(cs_pin/*,0*/);
 }
 void GPIO::open(int port, int DDR)
 {		
 	if(port == gpio_ce_pin){
 		gpio_0 = new mraa::Gpio(port,0);
-		gpio_0->useMmap(true);
+//		gpio_0->useMmap(true);
 		gpio_0->dir( (mraa::Dir)DDR);
 	}/*else
 	if(port == gpio_cs_pin){
